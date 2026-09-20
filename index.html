@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta name="theme-color" content="#fbf9f5"/>
+<title>Para Ti · Un rincón especial</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌸%3C/text%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,0..1&amp;icon_names=arrow_forward,auto_awesome,auto_stories,cake,celebration,chat_bubble,close,edit_note,favorite,graphic_eq,headphones,lightbulb,local_florist,local_pizza,music_note,nightlight,pause,pause_circle,photo_library,play_circle,replay,sentiment_very_satisfied,spa,temp_preferences_custom&amp;display=block" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<style>
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fbf9f5;
+  color: #1b1c1a;
+}
+.pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+.pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+body { min-height: 100dvh; }
+
+.material-symbols-outlined { user-select: none; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.animate-fadeIn { animation: fadeIn .45s ease both; }
+
+/* Ecualizador de la portada: se mueve solo mientras suena la canción */
+.eq { display: flex; align-items: flex-end; gap: 6px; height: 56px; }
+.eq span { width: 8px; height: 30%; border-radius: 9999px; background: rgba(255,255,255,.9); transition: height .3s ease; }
+.is-playing .eq span { animation: eq 1s ease-in-out infinite; }
+.is-playing .eq span:nth-child(2) { animation-delay: .15s; }
+.is-playing .eq span:nth-child(3) { animation-delay: .3s; }
+.is-playing .eq span:nth-child(4) { animation-delay: .45s; }
+.is-playing .eq span:nth-child(5) { animation-delay: .6s; }
+@keyframes eq { 0%,100% { height: 25%; } 50% { height: 100%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fadeIn, .is-playing .eq span { animation: none; }
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 pt-safe bg-surface-bright/90 backdrop-blur-xl shadow-[0_4px_24px_rgba(164,48,115,0.03)]">
+<div class="h-16 px-margin max-w-md mx-auto flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-fixed/60 flex items-center justify-center text-primary shadow-[0_2px_8px_rgba(164,48,115,0.08)]">
+<span class="material-symbols-outlined text-[19px]">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<h1 class="font-headline-md text-title-md text-primary italic leading-tight tracking-tight">Para Ti 🌸</h1>
+<p class="font-label-sm text-[10px] uppercase tracking-wider text-on-surface-variant/80">Un rincón especial</p>
+</div>
+</div>
+<button id="header-music" aria-label="Reproducir música especial" class="relative w-10 h-10 flex items-center justify-center rounded-full bg-primary-fixed/40 text-primary hover:bg-primary hover:text-on-primary transition-all duration-300 active:scale-95 shadow-[0_2px_10px_rgba(164,48,115,0.06)]">
+<span id="music-hint" class="absolute inset-0 rounded-full bg-primary-container/40 animate-ping"></span>
+<span id="header-music-icon" class="material-symbols-outlined text-[20px] relative">music_note</span>
+</button>
+</div>
+</header>
+
+<main class="flex-1 w-full max-w-md mx-auto bg-surface pt-16 pb-28 px-margin flex flex-col">
+
+<!-- ═══════════════ CUMPLEAÑOS ═══════════════ -->
+<div id="view-cumpleanos" class="view animate-fadeIn">
+<div class="flex flex-col w-full space-y-space-lg pt-space-md">
+
+<!-- Tarjeta principal (polaroid) -->
+<section class="relative bg-surface-container-lowest p-space-md rounded-lg shadow-[0_8px_30px_rgba(164,48,115,0.06)] flex flex-col">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-primary-fixed/40 backdrop-blur-sm rounded-full -rotate-1 shadow-sm flex items-center justify-center">
+<span class="font-label-sm text-primary tracking-widest text-[9px] uppercase">18 · 05</span>
+</div>
+<div class="relative w-full aspect-[4/5] rounded-[1.25rem] overflow-hidden bg-surface-container-low shadow-[0_4px_20px_rgba(164,48,115,0.08)]">
+<img alt="Anahi" class="w-full h-full object-cover object-[50%_35%]" src="img/tamo.jpg" fetchpriority="high"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-lowest/85 backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-primary text-[15px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+<span class="font-label-sm text-primary text-[10px] tracking-wider uppercase font-semibold">Nueva etapa</span>
+</div>
+</div>
+<div class="pt-space-md px-1 flex flex-col text-center">
+<div class="inline-flex items-center justify-center gap-1.5 self-center px-3 py-0.5 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant mb-space-xs">
+<span class="material-symbols-outlined text-[14px]">celebration</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase">Vuelta al sol</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">¡Feliz Cumpleaños! 🎂✨</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5 leading-relaxed">
+Un detalle sencillo hecho con mucho aprecio para desearte un año lleno de luz y cosas bonitas.
+</p>
+</div>
+</section>
+
+<!-- Nota editorial -->
+<section class="relative bg-surface-container-low p-space-lg rounded-lg shadow-[0_4px_24px_rgba(164,48,115,0.04)] overflow-hidden">
+<div class="absolute -right-4 -bottom-4 text-primary/10 pointer-events-none select-none">
+<span class="material-symbols-outlined text-[110px]">local_florist</span>
+</div>
+<div class="relative z-10 flex flex-col space-y-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest font-semibold">Palabras sinceras</span>
+</div>
+<span class="font-label-sm text-[11px] text-outline font-medium">De corazón</span>
+</div>
+<p class="font-headline-md text-headline-md text-on-surface font-normal italic leading-relaxed pt-1">
+“Quería dejarte este rinconcito para desearte un cumpleaños increíble. Me alegra mucho coincidir en esta vida y recordar con una sonrisa lo bonito que compartimos. Te deseo toda la felicidad, paz y proyectos cumplidos en esta nueva vuelta al sol.”
+</p>
+<div class="pt-2 flex items-center justify-between text-on-surface-variant">
+<span class="font-label-md text-label-md font-medium text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+Con gratitud y aprecio
+</span>
+<span class="font-label-sm text-[12px] text-outline-variant">Hoy y siempre</span>
+</div>
+</div>
+</section>
+
+<!-- Deseo interactivo -->
+<section class="flex flex-col bg-surface-container-lowest p-space-md rounded-lg shadow-[0_6px_25px_rgba(164,48,115,0.05)]">
+<div class="flex items-center gap-2 px-1 mb-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">temp_preferences_custom</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Un deseo para este año</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Toca la tarjeta para encender tu intención</p>
+</div>
+</div>
+<button type="button" id="wish-card" class="group relative w-full cursor-pointer bg-surface-container-high hover:bg-surface-container transition-all duration-300 rounded-DEFAULT p-space-md text-center flex flex-col items-center justify-center overflow-hidden active:scale-[0.98]" aria-live="polite">
+<div class="flex flex-col items-center py-2" id="wish-default-view">
+<div class="w-14 h-14 rounded-full bg-primary-fixed/80 text-primary flex items-center justify-center shadow-[0_4px_16px_rgba(164,48,115,0.15)] mb-2 group-hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-[28px]">cake</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">Toca para pedir tu deseo</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Respira profundo y descúbrelo ✨</p>
+</div>
+<div class="hidden flex-col items-center py-1 animate-fadeIn" id="wish-revealed-view">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center shadow-md mb-2">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+<p class="font-headline-md text-title-md text-secondary font-medium leading-snug px-2" id="wish-text"></p>
+<span class="font-label-sm text-label-sm text-outline mt-2 tracking-wide uppercase font-semibold">¡Que se cumpla con creces!</span>
+</div>
+</button>
+</section>
+
+<!-- Acceso a la música -->
+<a class="group flex items-center justify-between p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all duration-300 shadow-[0_4px_16px_rgba(164,48,115,0.04)] active:scale-[0.99]" data-path="musica" href="#musica">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-[0_4px_12px_rgba(164,48,115,0.25)] group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[22px]">headphones</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface group-hover:text-primary transition-colors truncate">Una canción para ti</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">La que empezó todo, para escucharla con calma</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm group-hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+</a>
+
+<footer class="text-center py-space-xs">
+<p class="font-label-sm text-[11px] text-outline tracking-wider uppercase">Celebrando tu vida con respeto y afecto</p>
+</footer>
+</div>
+</div>
+
+<!-- ═══════════════ MÚSICA ═══════════════ -->
+<div id="view-musica" class="view hidden animate-fadeIn">
+<div id="player-root" class="flex flex-col w-full gap-space-lg pt-space-md">
+
+<section class="flex flex-col gap-space-xs pt-space-xs">
+<div class="inline-flex items-center gap-space-xs self-start px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Tu espacio sonoro</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary mt-space-xs">Una canción para ti 🎧</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+La canción con la que empezó todo, para que la escuches a tu ritmo mientras recorres el rincón.
+</p>
+</section>
+
+<!-- Canción destacada -->
+<section class="relative bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md mt-space-sm">
+<div class="self-start -mt-space-md -ml-space-xs px-space-md py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed rotate-[-1.5deg] shadow-xs">
+<span class="font-label-sm text-label-sm">⭐ La que empezó todo</span>
+</div>
+<div class="flex flex-col gap-space-md items-center">
+<div class="relative w-full h-40 shrink-0 rounded-lg overflow-hidden bg-gradient-to-br from-primary-fixed via-tertiary-fixed-dim to-primary-container shadow-sm flex items-center justify-center">
+<div class="absolute -top-10 -left-6 w-40 h-40 rounded-full bg-white/30 blur-2xl"></div>
+<div class="absolute -bottom-12 -right-8 w-48 h-48 rounded-full bg-tertiary-container/40 blur-2xl"></div>
+<div class="eq relative" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded-full text-primary">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+<span class="font-label-sm text-label-sm">En bucle</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 w-full justify-between min-w-0">
+<div>
+<div class="flex items-center justify-between gap-2">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Destacada especial</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="time-total-top">4:28</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-0.5">Nuestra canción</h3>
+<p class="font-title-md text-title-md text-primary font-medium">Para escuchar sin prisa</p>
+<p class="font-body-md text-body-md text-on-surface-variant/90 italic mt-1.5">
+"Ojalá te regale, aunque sea por unos minutos, un poco de paz bonita."
+</p>
+</div>
+<div class="mt-space-sm pt-space-xs flex flex-col gap-1.5">
+<div id="seek" role="slider" tabindex="0" aria-label="Progreso de la canción" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" class="w-full py-2 cursor-pointer -my-2">
+<div class="w-full bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div id="seek-fill" class="bg-primary-container h-full rounded-full" style="width:0%"></div>
+</div>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm" id="time-current">0:00</span>
+<span class="font-label-sm text-label-sm" id="time-total">4:28</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<button type="button" id="play-btn" class="flex-1 min-w-[170px] min-h-[46px] px-space-md py-2.5 rounded-full bg-secondary text-on-secondary shadow-sm flex items-center justify-center gap-space-xs font-label-md text-label-md transition-transform active:scale-[0.98]">
+<span id="play-icon" class="material-symbols-outlined text-[18px]">play_circle</span>
+<span id="play-label">Reproducir</span>
+</button>
+<button type="button" id="restart-btn" class="min-h-[46px] px-space-md py-2.5 rounded-full bg-primary-fixed text-on-primary-fixed flex items-center justify-center gap-space-xs font-label-md text-label-md transition-transform active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Reiniciar</span>
+</button>
+</div>
+</section>
+
+<!-- Nota -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">lightbulb</span>
+<div class="flex flex-col gap-0.5">
+<h4 class="font-title-md text-title-md text-on-surface">Sin prisa</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+Solo dale play. La canción seguirá sonando mientras miras los recuerdos, y puedes pausarla cuando quieras desde el botón de arriba.
+</p>
+</div>
+</section>
+</div>
+</div>
+
+<!-- ═══════════════ RECUERDOS ═══════════════ -->
+<div id="view-recuerdos" class="view hidden animate-fadeIn">
+<div class="flex flex-col w-full pt-space-md">
+
+<section class="flex flex-col mb-space-lg">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-0.5 rounded-full bg-primary-fixed/30 text-on-primary-fixed-variant font-label-sm text-label-sm mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">auto_stories</span>
+<span>Álbum Seleccionado</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Recuerdos Compartidos 📷</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs max-w-md">
+Fotos y memorias de etapas bonitas que se guardan con cariño y respeto.
+</p>
+</section>
+
+<!-- Filtros -->
+<section class="flex items-center gap-space-sm overflow-x-auto pb-space-sm mb-space-lg no-scrollbar">
+<button type="button" class="memory-filter px-4 py-1.5 rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm transition-transform active:scale-95 whitespace-nowrap" data-filter="all">Todos</button>
+<button type="button" class="memory-filter px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed/40 transition-all active:scale-95 whitespace-nowrap" data-filter="risas">Risas</button>
+<button type="button" class="memory-filter px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed/40 transition-all active:scale-95 whitespace-nowrap" data-filter="salidas">Salidas</button>
+<button type="button" class="memory-filter px-4 py-1.5 rounded-full font-label-md text-label-md bg-surface-container text-on-surface-variant hover:bg-primary-fixed/40 transition-all active:scale-95 whitespace-nowrap" data-filter="ternura">Ternura</button>
+</section>
+
+<div class="flex flex-col gap-space-xl">
+
+<article class="memory-item group relative bg-surface-container-lowest p-4 pb-6 rounded-lg shadow-[0_8px_24px_rgba(164,48,115,0.06)] transition-all duration-300 hover:shadow-[0_14px_30px_rgba(164,48,115,0.1)]" data-category="ternura">
+<div class="relative w-full aspect-[4/3] rounded overflow-hidden bg-surface-container mb-4">
+<img alt="Una noche con luces cálidas y letras luminosas" data-zoom class="w-full h-full object-cover object-[50%_60%] cursor-zoom-in transition-transform duration-700 group-hover:scale-105" src="img/primerbeso.jpg" loading="lazy" decoding="async"/>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1 pointer-events-none">
+<span class="material-symbols-outlined text-[13px] text-primary">nightlight</span>
+<span>Noche de luces</span>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">La noche de las luces</h3>
+<button aria-label="Guardar con aprecio" class="like-button w-8 h-8 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-primary transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+Una noche de luces cálidas y un momento que no quise dejar pasar. De esos recuerdos que se guardan con cuidado.
+</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Memoria compartida</span>
+<span class="text-primary font-medium">Abril 2026</span>
+</div>
+</div>
+</article>
+
+<article class="memory-item group relative bg-surface-container-lowest p-4 pb-6 rounded-lg shadow-[0_8px_24px_rgba(164,48,115,0.06)] transition-all duration-300 hover:shadow-[0_14px_30px_rgba(164,48,115,0.1)]" data-category="risas salidas">
+<div class="relative w-full aspect-[4/3] rounded overflow-hidden bg-surface-container mb-4">
+<img alt="Una risa en una parada de bus" data-zoom class="w-full h-full object-cover object-[50%_55%] cursor-zoom-in transition-transform duration-700 group-hover:scale-105" src="img/risa.jpg" loading="lazy" decoding="async"/>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1 pointer-events-none">
+<span class="material-symbols-outlined text-[13px] text-primary">sentiment_very_satisfied</span>
+<span>Tarde de risas</span>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">La risa que sigo recordando</h3>
+<button aria-label="Guardar con aprecio" class="like-button w-8 h-8 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-primary transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+Una parada de bus, una tarde cualquiera y esa risa que se te escapaba sin poder evitarla.
+</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Memoria compartida</span>
+<span class="text-primary font-medium">Mayo 2026</span>
+</div>
+</div>
+</article>
+
+<article class="memory-item group relative bg-surface-container-lowest p-4 pb-6 rounded-lg shadow-[0_8px_24px_rgba(164,48,115,0.06)] transition-all duration-300 hover:shadow-[0_14px_30px_rgba(164,48,115,0.1)]" data-category="salidas">
+<div class="relative w-full aspect-[4/3] rounded overflow-hidden bg-surface-container mb-4">
+<img alt="Una tarde en una pizzería" data-zoom class="w-full h-full object-cover object-[50%_35%] cursor-zoom-in transition-transform duration-700 group-hover:scale-105" src="img/pensando.jpg" loading="lazy" decoding="async"/>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1 pointer-events-none">
+<span class="material-symbols-outlined text-[13px] text-primary">local_pizza</span>
+<span>Salida a comer</span>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Una pizzería y una tarde sencilla</h3>
+<button aria-label="Guardar con aprecio" class="like-button w-8 h-8 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-primary transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+Los planes más simples eran los que más se disfrutaban: buena compañía, una mesa y tiempo sin prisa.
+</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Rincón favorito</span>
+<span class="text-primary font-medium">Mayo 2026</span>
+</div>
+</div>
+</article>
+
+<article class="memory-item group relative bg-surface-container-lowest p-4 pb-6 rounded-lg shadow-[0_8px_24px_rgba(164,48,115,0.06)] transition-all duration-300 hover:shadow-[0_14px_30px_rgba(164,48,115,0.1)]" data-category="risas ternura">
+<div class="relative w-full aspect-[4/3] rounded overflow-hidden bg-surface-container mb-4">
+<img alt="Un secreto susurrado al oído frente al espejo" data-zoom class="w-full h-full object-cover object-[50%_30%] cursor-zoom-in transition-transform duration-700 group-hover:scale-105" src="img/fotosudados.jpg" loading="lazy" decoding="async"/>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1 pointer-events-none">
+<span class="material-symbols-outlined text-[13px] text-primary">chat_bubble</span>
+<span>Cómplices</span>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Un secreto al oído</h3>
+<button aria-label="Guardar con aprecio" class="like-button w-8 h-8 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-primary transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+Ese susurro cómplice frente al espejo, de los que solo se entienden entre dos.
+</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Memoria compartida</span>
+</div>
+</div>
+</article>
+
+<article class="memory-item group relative bg-surface-container-lowest p-4 pb-6 rounded-lg shadow-[0_8px_24px_rgba(164,48,115,0.06)] transition-all duration-300 hover:shadow-[0_14px_30px_rgba(164,48,115,0.1)]" data-category="ternura">
+<div class="relative w-full aspect-[4/3] rounded overflow-hidden bg-surface-container mb-4">
+<img alt="Un momento de calma sobre el sofá" data-zoom class="w-full h-full object-cover object-[50%_45%] cursor-zoom-in transition-transform duration-700 group-hover:scale-105" src="img/abrazo.jpg" loading="lazy" decoding="async"/>
+<div class="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm flex items-center gap-1 pointer-events-none">
+<span class="material-symbols-outlined text-[13px] text-primary">spa</span>
+<span>Calma</span>
+</div>
+</div>
+<div class="flex flex-col px-1">
+<div class="flex items-center justify-between gap-space-sm mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface tracking-tight">Descansar cerca de ti</h3>
+<button aria-label="Guardar con aprecio" class="like-button w-8 h-8 shrink-0 rounded-full bg-surface-container-low flex items-center justify-center text-outline hover:text-primary transition-colors active:scale-90" type="button">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+Hay una calma que solo se encuentra al lado de ciertas personas.
+</p>
+<div class="mt-3 pt-2 flex items-center justify-between text-outline font-label-sm text-label-sm">
+<span>Memoria compartida</span>
+</div>
+</div>
+</article>
+
+<!-- Nota de gratitud -->
+<article class="bg-primary-fixed/20 p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">lightbulb</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Nota de Gratitud</span>
+</div>
+<p class="font-headline-md text-title-md text-on-primary-fixed leading-snug">
+"Hay personas y momentos que cumplen su propósito dejándonos aprendizajes sinceros y sonrisas imborrables."
+</p>
+</article>
+</div>
+
+<footer class="mt-space-xl pt-space-lg mb-space-md flex flex-col items-center text-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary mb-space-sm">
+<span class="material-symbols-outlined text-[20px]">spa</span>
+</div>
+<p class="font-headline-md text-title-md text-on-surface max-w-xs leading-normal">
+Los buenos momentos siempre dejan una huella linda.
+</p>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mt-1 max-w-sm">
+Que sigan los buenos recuerdos en tu vida, hoy y siempre.
+</p>
+<div class="mt-space-md flex items-center gap-1 text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+</div>
+</footer>
+</div>
+</div>
+
+</main>
+
+<!-- Barra inferior -->
+<nav id="tabbar" class="fixed bottom-0 w-full z-50 pb-safe pointer-events-none px-margin mb-space-sm" data-active-classes="bg-primary text-on-primary shadow-[0_6px_20px_rgba(164,48,115,0.28)] scale-[1.02]">
+<div class="pointer-events-auto max-w-sm mx-auto bg-surface-bright/95 backdrop-blur-2xl rounded-full p-1.5 shadow-[0_10px_35px_rgba(164,48,115,0.1)] flex items-center justify-between">
+<a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-2 rounded-full text-on-surface-variant transition-all duration-300" data-path="cumpleanos" href="#cumpleanos">
+<span class="material-symbols-outlined text-[21px]">cake</span>
+<span class="font-label-sm text-label-sm mt-0.5 tracking-normal font-medium">Cumpleaños</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-2 rounded-full text-on-surface-variant transition-all duration-300" data-path="musica" href="#musica">
+<span class="material-symbols-outlined text-[21px]">headphones</span>
+<span class="font-label-sm text-label-sm mt-0.5 tracking-normal font-medium">Música</span>
+</a>
+<a class="flex-1 flex flex-col items-center justify-center min-h-[44px] py-1.5 px-2 rounded-full text-on-surface-variant transition-all duration-300" data-path="recuerdos" href="#recuerdos">
+<span class="material-symbols-outlined text-[21px]">photo_library</span>
+<span class="font-label-sm text-label-sm mt-0.5 tracking-normal font-medium">Recuerdos</span>
+</a>
+</div>
+</nav>
+
+<!-- Visor de fotos -->
+<div id="lightbox" class="hidden fixed inset-0 z-[60] bg-black/85 backdrop-blur-sm items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+<button type="button" id="lightbox-close" aria-label="Cerrar" class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 text-white flex items-center justify-center hover:bg-white/25 transition-colors">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+<img id="lightbox-img" alt="" class="max-w-full max-h-[88vh] rounded-lg shadow-2xl"/>
+</div>
+
+<audio id="song" src="musica.mp3" loop preload="metadata"></audio>
+
+<script>
+(function () {
+  /* ── Pestañas ─────────────────────────────────────────── */
+  const PATHS = ['cumpleanos', 'musica', 'recuerdos'];
+  const tabbar = document.getElementById('tabbar');
+  const ACTIVE = tabbar.dataset.activeClasses.split(' ');
+
+  function show(path) {
+    if (!PATHS.includes(path)) path = 'cumpleanos';
+    PATHS.forEach(function (p) {
+      document.getElementById('view-' + p).classList.toggle('hidden', p !== path);
+    });
+    tabbar.querySelectorAll('a[data-path]').forEach(function (a) {
+      const on = a.dataset.path === path;
+      ACTIVE.forEach(function (c) { a.classList.toggle(c, on); });
+      a.classList.toggle('text-on-surface-variant', !on);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', function () { show(location.hash.slice(1)); });
+  show(location.hash.slice(1));
+
+  /* ── Deseo ────────────────────────────────────────────── */
+  const WISHES = [
+    'Que este año te regale serenidad para tus días, claridad en tus decisiones y risas sinceras con quienes te rodean.',
+    'Que cada proyecto que emprendas florezca con éxito y encuentres paz en cada paso del camino.',
+    'Que no te falte salud, momentos bonitos en calma y motivos diarios para sonreír.',
+    'Que la vida continúe abriéndote puertas maravillosas y te recompense por todo lo bueno que brindas.'
+  ];
+  const wishDefault = document.getElementById('wish-default-view');
+  const wishRevealed = document.getElementById('wish-revealed-view');
+  const wishText = document.getElementById('wish-text');
+  document.getElementById('wish-card').addEventListener('click', function () {
+    const others = WISHES.filter(function (w) { return w !== wishText.textContent; });
+    wishText.textContent = others[Math.floor(Math.random() * others.length)];
+    wishDefault.classList.add('hidden');
+    wishRevealed.classList.remove('hidden');
+    wishRevealed.classList.add('flex');
+  });
+
+  /* ── Filtros y corazones de Recuerdos ─────────────────── */
+  const ON = 'bg-primary text-on-primary shadow-sm'.split(' ');
+  const OFF = 'bg-surface-container text-on-surface-variant'.split(' ');
+  const filters = document.querySelectorAll('.memory-filter');
+  const cards = document.querySelectorAll('.memory-item');
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const f = btn.dataset.filter;
+      filters.forEach(function (b) {
+        const on = b === btn;
+        ON.forEach(function (c) { b.classList.toggle(c, on); });
+        OFF.forEach(function (c) { b.classList.toggle(c, !on); });
+      });
+      cards.forEach(function (card) {
+        const match = f === 'all' || (card.dataset.category || '').split(' ').includes(f);
+        card.classList.toggle('hidden', !match);
+      });
+    });
+  });
+  document.querySelectorAll('.like-button').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const on = btn.getAttribute('aria-pressed') === 'true';
+      btn.setAttribute('aria-pressed', String(!on));
+      btn.querySelector('.material-symbols-outlined').style.fontVariationSettings = on ? "'FILL' 0" : "'FILL' 1";
+      btn.classList.toggle('text-primary', !on);
+      btn.classList.toggle('bg-primary-fixed/30', !on);
+      btn.classList.toggle('text-outline', on);
+      btn.classList.toggle('bg-surface-container-low', on);
+    });
+  });
+
+  /* ── Visor de fotos ───────────────────────────────────── */
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  function closeLb() { lb.classList.add('hidden'); lb.classList.remove('flex'); lbImg.src = ''; }
+  document.addEventListener('click', function (e) {
+    const img = e.target.closest('img[data-zoom]');
+    if (!img) return;
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    lb.classList.remove('hidden'); lb.classList.add('flex');
+  });
+  lb.addEventListener('click', function (e) { if (e.target !== lbImg) closeLb(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+
+  /* ── Reproductor ──────────────────────────────────────── */
+  const audio = document.getElementById('song');
+  const root = document.getElementById('player-root');
+  const headerBtn = document.getElementById('header-music');
+  const headerIcon = document.getElementById('header-music-icon');
+  const hint = document.getElementById('music-hint');
+  const playBtn = document.getElementById('play-btn');
+  const playIcon = document.getElementById('play-icon');
+  const playLabel = document.getElementById('play-label');
+  const seek = document.getElementById('seek');
+  const fill = document.getElementById('seek-fill');
+  const tCur = document.getElementById('time-current');
+  const tTot = document.getElementById('time-total');
+  const tTop = document.getElementById('time-total-top');
+
+  function fmt(s) {
+    if (!isFinite(s)) return '0:00';
+    const m = Math.floor(s / 60), r = Math.floor(s % 60);
+    return m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function toggle() {
+    if (audio.paused) {
+      audio.play().catch(function () {});
+    } else {
+      audio.pause();
+    }
+  }
+  function render() {
+    const playing = !audio.paused;
+    root.classList.toggle('is-playing', playing);
+    headerIcon.textContent = playing ? 'pause' : 'music_note';
+    playIcon.textContent = playing ? 'pause_circle' : 'play_circle';
+    playLabel.textContent = playing ? 'Pausar' : 'Reproducir';
+    headerBtn.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música especial');
+    if (playing) hint.classList.add('hidden');
+  }
+  function progress() {
+    const d = audio.duration;
+    const pct = d ? (audio.currentTime / d) * 100 : 0;
+    fill.style.width = pct + '%';
+    seek.setAttribute('aria-valuenow', Math.round(pct));
+    tCur.textContent = fmt(audio.currentTime);
+  }
+  function seekTo(ratio) {
+    if (audio.duration) audio.currentTime = Math.min(Math.max(ratio, 0), 1) * audio.duration;
+  }
+
+  headerBtn.addEventListener('click', toggle);
+  playBtn.addEventListener('click', toggle);
+  document.getElementById('restart-btn').addEventListener('click', function () {
+    audio.currentTime = 0;
+    audio.play().catch(function () {});
+  });
+  seek.addEventListener('click', function (e) {
+    const r = seek.getBoundingClientRect();
+    seekTo((e.clientX - r.left) / r.width);
+  });
+  seek.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowRight') audio.currentTime = Math.min(audio.currentTime + 5, audio.duration || 0);
+    if (e.key === 'ArrowLeft') audio.currentTime = Math.max(audio.currentTime - 5, 0);
+  });
+  audio.addEventListener('play', render);
+  audio.addEventListener('pause', render);
+  audio.addEventListener('timeupdate', progress);
+  audio.addEventListener('loadedmetadata', function () {
+    tTot.textContent = tTop.textContent = fmt(audio.duration);
+  });
+})();
+</script>
+</body>
+</html>
