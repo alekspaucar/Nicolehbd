@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
   <meta name="theme-color" content="#fbf9f5"/>
   <title>Para ti, Anis · Feliz cumpleaños</title>
+  <!-- Keep the surprise hidden even if the external stylesheet is cached or unavailable. -->
+  <style>
+    html:not(.unlocked) #page { display: none !important; }
+    .unlocked #gate { display: none !important; }
+    body.is-celebrating #page { visibility: hidden; }
+  </style>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌻%3C/text%3E%3C/svg%3E"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -24,7 +30,7 @@
       checkBirthday();
     })();
   </script>
-  <link href="styles.css" rel="stylesheet"/>
+  <link href="styles.css?v=20261018-1" rel="stylesheet"/>
   <script src="memories.js" defer></script>
   <script src="celebration.js" defer></script>
   <script src="dedication.js" defer></script>
