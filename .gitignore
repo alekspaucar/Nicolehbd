@@ -1,2 +1,9 @@
 node_modules/
 .DS_Store
+# Private originals stay on this computer; publish only optimized media/ copies.
+Anis/
+.env
+.env.*
+!.env.example
+supabase/.temp/
+supabase/.branches/

@@ -1,0 +1,5 @@
+project_id = "anahi-para-ti"
+
+[functions.dedications]
+# This function authenticates x-collection-key before making any database request.
+verify_jwt = false

@@ -1,0 +1,630 @@
+{
+  "media/alitas-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 2.8333333333333335,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/alitas-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 134052,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 3495510
+  },
+  "media/anahi-chiquita-1.jpg": {
+    "type": "image",
+    "width": 720,
+    "height": 540,
+    "codec": "jpeg",
+    "bytes": 152409
+  },
+  "media/anahi-chiquita-2.jpg": {
+    "type": "image",
+    "width": 540,
+    "height": 960,
+    "codec": "jpeg",
+    "bytes": 92919
+  },
+  "media/anahi-cocina-1.jpg": {
+    "type": "image",
+    "width": 1162,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 604418
+  },
+  "media/anahi-en-el-colegio-1.jpg": {
+    "type": "image",
+    "width": 1050,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 497589
+  },
+  "media/bano-1.jpg": {
+    "type": "image",
+    "width": 940,
+    "height": 1256,
+    "codec": "jpeg",
+    "bytes": 358245
+  },
+  "media/bano-2.jpg": {
+    "type": "image",
+    "width": 942,
+    "height": 1254,
+    "codec": "jpeg",
+    "bytes": 323329
+  },
+  "media/besosss-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 7.116666666666666,
+    "height": 1280,
+    "width": 720,
+    "poster": "media/besosss-1-poster.jpg",
+    "posterWidth": 506,
+    "posterHeight": 900,
+    "posterBytes": 76037,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "aac ",
+    "bytes": 5784847
+  },
+  "media/bonita-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 13.568333333333333,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/bonita-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 96158,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 15988357
+  },
+  "media/bus-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 6.266666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/bus-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 116434,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 7782075
+  },
+  "media/caminaslindo-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 21.101666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/caminaslindo-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 107242,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 25998870
+  },
+  "media/casa-ema-1.jpg": {
+    "type": "image",
+    "width": 1059,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 298068
+  },
+  "media/cole-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 4.806666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/cole-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 198572,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 5923307
+  },
+  "media/comida-1.jpg": {
+    "type": "image",
+    "width": 1179,
+    "height": 275,
+    "codec": "jpeg",
+    "bytes": 58304
+  },
+  "media/comidas-juntos-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 3.8666666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/comidas-juntos-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 133934,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 4716529
+  },
+  "media/compras-anahi-1.jpg": {
+    "type": "image",
+    "width": 1052,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 485484
+  },
+  "media/de-la-nada-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 26.62,
+    "height": 1280,
+    "width": 592,
+    "poster": "media/de-la-nada-1-poster.jpg",
+    "posterWidth": 416,
+    "posterHeight": 900,
+    "posterBytes": 67873,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "aac ",
+    "bytes": 31106492
+  },
+  "media/dia-feo-1.jpg": {
+    "type": "image",
+    "width": 1059,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 342781
+  },
+  "media/dormia-en-carro-1.jpg": {
+    "type": "image",
+    "width": 912,
+    "height": 1228,
+    "codec": "jpeg",
+    "bytes": 414130
+  },
+  "media/enfermita-1.jpg": {
+    "type": "image",
+    "width": 1060,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 477145
+  },
+  "media/esperaba-gym-1.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 646,
+    "codec": "jpeg",
+    "bytes": 158243
+  },
+  "media/estalkeaba-1.jpg": {
+    "type": "image",
+    "width": 836,
+    "height": 1274,
+    "codec": "jpeg",
+    "bytes": 240520
+  },
+  "media/facil-enojar-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 3.3333333333333335,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/facil-enojar-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 184183,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 4314597
+  },
+  "media/flor-amarilla-1.jpg": {
+    "type": "image",
+    "width": 544,
+    "height": 727,
+    "codec": "jpeg",
+    "bytes": 98314
+  },
+  "media/flores-1.jpg": {
+    "type": "image",
+    "width": 236,
+    "height": 462,
+    "codec": "jpeg",
+    "bytes": 30013
+  },
+  "media/foto-1.jpg": {
+    "type": "image",
+    "width": 940,
+    "height": 1250,
+    "codec": "jpeg",
+    "bytes": 549974
+  },
+  "media/foto-con-flores-1.jpg": {
+    "type": "image",
+    "width": 1050,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 482638
+  },
+  "media/foto-linda-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 1.5666666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/foto-linda-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 230278,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 2120976
+  },
+  "media/fotos-tuyas-1.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 909,
+    "codec": "jpeg",
+    "bytes": 439457
+  },
+  "media/fotos-tuyas-2.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 909,
+    "codec": "jpeg",
+    "bytes": 465997
+  },
+  "media/fotos-tuyas-3.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 987,
+    "codec": "jpeg",
+    "bytes": 424783
+  },
+  "media/gato-1.jpg": {
+    "type": "image",
+    "width": 1170,
+    "height": 627,
+    "codec": "jpeg",
+    "bytes": 148280
+  },
+  "media/hablar-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 6.666666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/hablar-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 95413,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 8179188
+  },
+  "media/impaciente-1.jpg": {
+    "type": "image",
+    "width": 880,
+    "height": 1230,
+    "codec": "jpeg",
+    "bytes": 356497
+  },
+  "media/ingles-1.jpg": {
+    "type": "image",
+    "width": 788,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 355311
+  },
+  "media/kfd-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 5.4,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/kfd-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 71269,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 6797364
+  },
+  "media/la-mejor-foto-q-me-tomo-1.jpg": {
+    "type": "image",
+    "width": 1050,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 461246
+  },
+  "media/life-1.jpg": {
+    "type": "image",
+    "width": 1179,
+    "height": 471,
+    "codec": "jpeg",
+    "bytes": 76277
+  },
+  "media/llamadas-1.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 192376
+  },
+  "media/nunca-pienses-1.jpg": {
+    "type": "image",
+    "width": 992,
+    "height": 234,
+    "codec": "jpeg",
+    "bytes": 22666
+  },
+  "media/ojitos-anahi-1.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 290,
+    "codec": "jpeg",
+    "bytes": 117795
+  },
+  "media/para-una-sola-vez-1.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 933,
+    "codec": "jpeg",
+    "bytes": 117378
+  },
+  "media/paraguas-1.jpg": {
+    "type": "image",
+    "width": 788,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 373162
+  },
+  "media/parque-anis-1.jpg": {
+    "type": "image",
+    "width": 604,
+    "height": 468,
+    "codec": "jpeg",
+    "bytes": 79903
+  },
+  "media/parque-motos-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 11.501666666666667,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/parque-motos-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 236171,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 14214457
+  },
+  "media/pastilla-1.jpg": {
+    "type": "image",
+    "width": 1179,
+    "height": 218,
+    "codec": "jpeg",
+    "bytes": 33386
+  },
+  "media/perrito-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 15.596666666666666,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/perrito-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 267423,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 19862921
+  },
+  "media/primera-cita-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 11.468333333333334,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/primera-cita-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 160498,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 14053072
+  },
+  "media/recuerditos-1.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 539,
+    "codec": "jpeg",
+    "bytes": 183064
+  },
+  "media/regresaste-1.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 168778
+  },
+  "media/sali-trabajo-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 2.4,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/sali-trabajo-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 104937,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 3068622
+  },
+  "media/salida-del-trabajo-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 16.343333333333334,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/salida-del-trabajo-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 137324,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 19890780
+  },
+  "media/salva-1.jpg": {
+    "type": "image",
+    "width": 1179,
+    "height": 844,
+    "codec": "jpeg",
+    "bytes": 151452
+  },
+  "media/stalk-1.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 130953
+  },
+  "media/stalk-2.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 114958
+  },
+  "media/stalk-3.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 128162
+  },
+  "media/stalk-4.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 104121
+  },
+  "media/stalk-5.jpg": {
+    "type": "image",
+    "width": 646,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 131413
+  },
+  "media/tatu-1.jpg": {
+    "type": "image",
+    "width": 1400,
+    "height": 1050,
+    "codec": "jpeg",
+    "bytes": 484962
+  },
+  "media/tatuaje-1.jpg": {
+    "type": "image",
+    "width": 940,
+    "height": 1254,
+    "codec": "jpeg",
+    "bytes": 316865
+  },
+  "media/te-escogeria-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 13.7,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/te-escogeria-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 83330,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "aac ",
+    "bytes": 12814642
+  },
+  "media/tomando-agua-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 7.4,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/tomando-agua-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 134101,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 9119511
+  },
+  "media/tus-pas-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 17.268333333333334,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/tus-pas-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 149729,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 21255741
+  },
+  "media/ultima-vez-1.jpg": {
+    "type": "image",
+    "width": 1047,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 575137
+  }
+}

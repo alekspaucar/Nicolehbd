@@ -2,7 +2,13 @@
   "name": "anahi-para-ti",
   "private": true,
   "scripts": {
-    "build:css": "tailwindcss -c tailwind.config.js -i input.css -o styles.css --minify"
+    "build:css": "tailwindcss -c tailwind.config.js -i input.css -o styles.css --minify",
+    "build:memories": "node scripts/build-memories.mjs",
+    "build:dedications": "node scripts/build-dedication-backend.mjs",
+    "build": "npm run build:memories && npm run build:dedications && npm run build:css",
+    "verify": "node --test scripts/verify.mjs scripts/dedication*.test.mjs scripts/celebration.test.mjs",
+    "dev": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs --preview"
   },
   "devDependencies": {
     "tailwindcss": "3.4.17"
