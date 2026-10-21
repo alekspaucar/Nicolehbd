@@ -64,13 +64,14 @@ test('every original memory, text and media reaches the album exactly once', asy
   const expected = new Map();
   for (const folder of folders) {
     const files = (await readdir(join(root, 'Anis', folder.name))).filter(file => file !== '.DS_Store');
-    const textFiles = files.filter(file => !file.includes('.'));
+    const textFiles = files.filter(file => /\.tx?$/i.test(file) || !file.includes('.'));
     assert.equal(textFiles.length, 1);
     const text = (await readFile(join(root, 'Anis', folder.name, textFiles[0]), 'utf8')).trim();
-    const sources = files.filter(file => /\.(jpg|jpeg|png|mp4)$/i.test(file)).map(file => ['Anis', folder.name, file].map(encodeURIComponent).join('/')).sort();
+    const sources = files.filter(file => /\.(jpg|jpeg|png|webp|heic|mp4|mov|m4v)$/i.test(file)).map(file => ['Anis', folder.name, file].map(encodeURIComponent).join('/')).sort();
     expected.set(folder.name, { text, sources });
   }
-  assert.equal(memories.length, 56);
+  const expectedSourceCount = [...expected.values()].reduce((count, memory) => count + memory.sources.length, 0);
+  assert.equal(memories.length, folders.length);
   assert.equal(expected.size, memories.length);
   const observedSources = new Set();
   let previousKnownDate = '';
@@ -94,5 +95,5 @@ test('every original memory, text and media reaches the album exactly once', asy
     }
   }
   assert.equal(expected.size, 0);
-  assert.equal(observedSources.size, 64);
+  assert.equal(observedSources.size, expectedSourceCount);
 });

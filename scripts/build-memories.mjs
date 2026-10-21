@@ -11,7 +11,7 @@ const allowedArguments = new Set(['--require-media']);
 const unknownArguments = process.argv.slice(2).filter((value) => !allowedArguments.has(value));
 const imageExtensions = new Set(['.jpg', '.jpeg', '.png', '.webp', '.heic']);
 const videoExtensions = new Set(['.mp4', '.mov', '.m4v']);
-const sections = new Set(['Antes de todo', 'Los primeros recuerdos', 'Volver a encontrarnos', 'Lo cotidiano contigo']);
+const sections = new Set(['Antes de todo', 'Los primeros recuerdos', 'Volver a encontrarnos', 'Lo cotidiano contigo', 'Un nuevo comienzo']);
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
@@ -101,7 +101,7 @@ async function main() {
     const entries = (await readdir(path.join(sourceRoot, folder), { withFileTypes: true })).filter((entry) => entry.name !== '.DS_Store');
     assert(entries.every((entry) => entry.isFile()), `Unexpected directory or symbolic link in ${JSON.stringify(folder)}`);
     const files = entries.map((entry) => entry.name).sort();
-    const textFiles = files.filter((filename) => path.extname(filename) === '');
+    const textFiles = files.filter((filename) => path.extname(filename) === '' || path.extname(filename).toLowerCase() === '.tx');
     const mediaFiles = files.filter((filename) => mediaType(filename));
     const unexpected = files.filter((filename) => !textFiles.includes(filename) && !mediaFiles.includes(filename));
     assert(unexpected.length === 0, `Unexpected files in ${JSON.stringify(folder)}: ${unexpected.map(JSON.stringify).join(', ')}`);

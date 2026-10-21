@@ -54,5 +54,9 @@
   "bus": { "order": 53, "title": "En el bus", "year": 2026, "date": "2026-05-31", "section": "Lo cotidiano contigo", "dateSource": "source-media" },
   "foto linda": { "order": 54, "title": "Una foto linda", "year": 2026, "date": "2026-05-31", "section": "Lo cotidiano contigo", "dateSource": "source-media" },
   "ultima vez": { "order": 55, "title": "Un día de lluvia", "year": null, "date": null, "section": "Lo cotidiano contigo", "note": "Se agrupa junto a alitas por las coincidencias del relato, sin afirmar que sea el mismo encuentro." },
-  "alitas": { "order": 56, "title": "Alitas y lluvia", "year": 2026, "date": "2026-05-31", "section": "Lo cotidiano contigo", "dateSource": "source-media" }
+  "alitas": { "order": 56, "title": "Alitas y lluvia", "year": 2026, "date": "2026-05-31", "section": "Lo cotidiano contigo", "dateSource": "source-media" },
+  "borracha": { "order": 57, "title": "Crear recuerdos contigo", "year": null, "date": null, "section": "Un nuevo comienzo" },
+  "volver": { "order": 58, "title": "Volvimos", "year": null, "date": null, "section": "Un nuevo comienzo" },
+  "mi casa ": { "order": 59, "title": "Mi casa también es tu casa", "year": 2026, "date": "2026-10-17", "section": "Un nuevo comienzo", "dateSource": "source-media" },
+  "flores amarillas": { "order": 60, "title": "Te elijo otra vez", "year": 2026, "date": "2026-10-20", "section": "Un nuevo comienzo", "dateSource": "source-media" }
 }

@@ -87,7 +87,23 @@
     "posterBytes": 96158,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 15988357
+    "bytes": 15977040
+  },
+  "media/borracha-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 2,
+    "height": 1280,
+    "width": 960,
+    "poster": "media/borracha-1-poster.jpg",
+    "posterWidth": 675,
+    "posterHeight": 900,
+    "posterBytes": 183763,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "lpcm",
+    "bytes": 2699184
   },
   "media/bus-1.mp4": {
     "type": "video",
@@ -103,7 +119,7 @@
     "posterBytes": 116434,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 7782075
+    "bytes": 7782099
   },
   "media/caminaslindo-1.mp4": {
     "type": "video",
@@ -255,6 +271,29 @@
     "codec": "jpeg",
     "bytes": 30013
   },
+  "media/flores-amarillas-1.jpg": {
+    "type": "image",
+    "width": 1056,
+    "height": 1400,
+    "codec": "jpeg",
+    "bytes": 462849
+  },
+  "media/flores-amarillas-2.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 3.76,
+    "height": 1280,
+    "width": 720,
+    "poster": "media/flores-amarillas-2-poster.jpg",
+    "posterWidth": 506,
+    "posterHeight": 900,
+    "posterBytes": 122877,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "aac ",
+    "bytes": 3557339
+  },
   "media/foto-1.jpg": {
     "type": "image",
     "width": 940,
@@ -357,7 +396,7 @@
     "posterBytes": 71269,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 6797364
+    "bytes": 6797376
   },
   "media/la-mejor-foto-q-me-tomo-1.jpg": {
     "type": "image",
@@ -379,6 +418,27 @@
     "height": 1400,
     "codec": "jpeg",
     "bytes": 192376
+  },
+  "media/mi-casa-1.jpg": {
+    "type": "image",
+    "width": 1179,
+    "height": 1076,
+    "codec": "jpeg",
+    "bytes": 95679
+  },
+  "media/mi-casa-2.jpg": {
+    "type": "image",
+    "width": 1179,
+    "height": 1021,
+    "codec": "jpeg",
+    "bytes": 82794
+  },
+  "media/mi-casa-3.jpg": {
+    "type": "image",
+    "width": 991,
+    "height": 1339,
+    "codec": "jpeg",
+    "bytes": 175627
   },
   "media/nunca-pienses-1.jpg": {
     "type": "image",
@@ -468,7 +528,7 @@
     "posterBytes": 160498,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 14053072
+    "bytes": 14053036
   },
   "media/recuerditos-1.jpg": {
     "type": "image",
@@ -498,7 +558,7 @@
     "posterBytes": 104937,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 3068622
+    "bytes": 3068623
   },
   "media/salida-del-trabajo-1.mp4": {
     "type": "video",
@@ -514,7 +574,7 @@
     "posterBytes": 137324,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 19890780
+    "bytes": 19890781
   },
   "media/salva-1.jpg": {
     "type": "image",
@@ -586,7 +646,7 @@
     "posterBytes": 83330,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "aac ",
-    "bytes": 12814642
+    "bytes": 12814643
   },
   "media/tomando-agua-1.mp4": {
     "type": "video",
@@ -602,7 +662,7 @@
     "posterBytes": 134101,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 9119511
+    "bytes": 9119536
   },
   "media/tus-pas-1.mp4": {
     "type": "video",
@@ -618,7 +678,7 @@
     "posterBytes": 149729,
     "sourceCodec": "hvc1",
     "sourceAudioCodec": "lpcm",
-    "bytes": 21255741
+    "bytes": 21255766
   },
   "media/ultima-vez-1.jpg": {
     "type": "image",
@@ -626,5 +686,21 @@
     "height": 1400,
     "codec": "jpeg",
     "bytes": 575137
+  },
+  "media/volver-1.mp4": {
+    "type": "video",
+    "audioCodec": "aac ",
+    "audioTracks": 1,
+    "codec": "avc1",
+    "duration": 30.488466,
+    "height": 1280,
+    "width": 720,
+    "poster": "media/volver-1-poster.jpg",
+    "posterWidth": 506,
+    "posterHeight": 900,
+    "posterBytes": 45871,
+    "sourceCodec": "hvc1",
+    "sourceAudioCodec": "aac ",
+    "bytes": 23974975
   }
 }

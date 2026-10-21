@@ -1084,5 +1084,101 @@ window.MEMORIES = [
         "poster": "media/alitas-1-poster.jpg"
       }
     ]
+  },
+  {
+    "id": "borracha",
+    "title": "Crear recuerdos contigo",
+    "text": "me dices que todo grabo de todo, pero yo solo quiero tener constancia de que estoy creando recuerdos contigo <3 porque se que algun dia \nlo revisare y vere que siempre estaba molestandote haciendote enojar etc, jsjsj ah y una cosa mas no me gusta que tomes solita con manes que \nmas o menos les conoces :) jsjs y quiero que porfavor me llames si algun dia tomas, porque eres cabeza de pollo :3 jsjsj yo teamo anahi \ny eso no va a cambiar temodoro.",
+    "year": null,
+    "date": null,
+    "dateSource": null,
+    "section": "Un nuevo comienzo",
+    "media": [
+      {
+        "src": "media/borracha-1.mp4",
+        "originalSrc": "Anis/borracha/IMG_0633.mp4",
+        "type": "video",
+        "width": 960,
+        "height": 1280,
+        "poster": "media/borracha-1-poster.jpg"
+      }
+    ]
+  },
+  {
+    "id": "volver",
+    "title": "Volvimos",
+    "text": "anahi, doy gracias a dios que me hayas llamado a mi :) cuando tu estabas ebria, porque si no hubiera sido por eso \ncreeme que todavia seguiriamos lejos, distantes, en contacto cero, y es algo que no me hubiera gustado, porque en serio \nyo te extrañe cada dia de mi vida, cada dia que estuvimos separados yo te extrañe anahi, tenia tanto por contarte, siempre hice cosas \npensando en ti, siempre encontraba la manera de tenerte presente, y nunca quisiera que volvamos a tener las mismas peleas de antes\nyo prometi mejorar, prometi ser mejor persona, y sinceramente cambie en muchos aspectos, y me gustaria que podamos seguir creciendo juntos\ncomo persona y como pareja <3, yo te apoyare en todo lo que tu decidas hacer, yo estare pendiente de ti siempre :) y nooo te superare nunca \nporque tu eres el amor de mi vida, y yo quiero todo contigo una vida contigo, ser felices, tener 28 años y tu 26 y estar de viaje tu y yo en algun \nlugar del mundo, y decir que eres lo mejor que me ha pasado en la vida, tener 40 y tu 38, tener niños ya grandes tu como madre y yo como padre, y decir \nfrente a nuestros hijos, siempre fuiste tu lo mejor que Dios me dio en la vida, tener 65 y tu 63 :) verlos crecer verlos ya grandes y decir, yo siempre \nluche por nicole, siempre quise que fuera ella siempre la amare pase lo que pase...  \nnose que nos depare el destino, pero si no es contigo no quiero que sea con nadie, no quiero que otra persona se meta en mi vida solo tu. \nalgo si estoy seguro, te amo y te amare por el resto de mi vida <3 \nmi pedazito de cielo❤️...",
+    "year": null,
+    "date": null,
+    "dateSource": null,
+    "section": "Un nuevo comienzo",
+    "media": [
+      {
+        "src": "media/volver-1.mp4",
+        "originalSrc": "Anis/volver/29ee57f8920845deb7918364a19c300f.mp4",
+        "type": "video",
+        "width": 720,
+        "height": 1280,
+        "poster": "media/volver-1-poster.jpg"
+      }
+    ]
+  },
+  {
+    "id": "mi-casa",
+    "title": "Mi casa también es tu casa",
+    "text": "el echo de que tu vinieras a mi cerro jaja nunca lo considere asi hasta que tuu me dijiste eso jajaj, fue lo mas lindo del mundo, porque es un paso mas de que conozcas a mi familia \ny siendote sincero a mi mama nunca le he presentado a una chica, y puedes preguntarle, sacale todas las preguntas del mundo, y mi familia ya sabe que tengo novia\npero jsjs algun dia te los presentare porque en si mi familia es cargosa demasiado diria yo, y se que te gusta que las familias sean unidas, creeme nicole que tu eres bienvenida a mi familia\n:) eres ya parte de mi vida y eso te convierte en tia de 6 sobrinos jjajaj cuñada de 3 hermanas, y 2 hermanos, prima de tantos primos etc \n❤️ soy feliz al tenerte, soy feliz contigo, espero que siempre seamos felices, y arreglemos nuestros asuntos<3 teamo anahi\nßß",
+    "year": 2026,
+    "date": "2026-10-17",
+    "dateSource": "source-media",
+    "section": "Un nuevo comienzo",
+    "media": [
+      {
+        "src": "media/mi-casa-1.jpg",
+        "originalSrc": "Anis/mi%20casa%20/IMG_0817.jpg",
+        "type": "image",
+        "width": 1179,
+        "height": 1076
+      },
+      {
+        "src": "media/mi-casa-2.jpg",
+        "originalSrc": "Anis/mi%20casa%20/IMG_0818.jpg",
+        "type": "image",
+        "width": 1179,
+        "height": 1021
+      },
+      {
+        "src": "media/mi-casa-3.jpg",
+        "originalSrc": "Anis/mi%20casa%20/IMG_1016.jpg",
+        "type": "image",
+        "width": 991,
+        "height": 1339
+      }
+    ]
+  },
+  {
+    "id": "flores-amarillas",
+    "title": "Te elijo otra vez",
+    "text": "yo compre las flores, yo organize todo, yo dije cuando y a que hora, yo pense en donde, yo sabia que te iba a gustar las flores\ny sabes, nunca me arrepenti de nada, tal vez de no luchar por ti, pero eso nos hizo mejores personas, debiamos tener un tiempo a solas\npara aclarar pensamientos, arreglar nuestro corazon, y llegar a saber que no nos podemos soltar ni olvidar, porque en el fondo se que eres tu la mujer de mis sueños \ny se que biiiiienn BIENNNN en el fondo jajajja, yo soy el hombre de tus sueños <3, no quiero soltarte solecito, y haria miles de cosas mas como esas, para que sepas \nque yoooo te elijo y te elejire toda mi vida :) jsjs",
+    "year": 2026,
+    "date": "2026-10-20",
+    "dateSource": "source-media",
+    "section": "Un nuevo comienzo",
+    "media": [
+      {
+        "src": "media/flores-amarillas-1.jpg",
+        "originalSrc": "Anis/flores%20amarillas/Captura%20de%20pantalla%202026-10-20%20a%20la(s)%2010.41.46%E2%80%AFp.%E2%80%AFm..png",
+        "type": "image",
+        "width": 1056,
+        "height": 1400
+      },
+      {
+        "src": "media/flores-amarillas-2.mp4",
+        "originalSrc": "Anis/flores%20amarillas/IMG_1082.mp4",
+        "type": "video",
+        "width": 720,
+        "height": 1280,
+        "poster": "media/flores-amarillas-2-poster.jpg"
+      }
+    ]
   }
 ];
