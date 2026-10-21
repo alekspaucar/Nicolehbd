@@ -1,10 +1,8 @@
-// Local preview: saved in this browser. Shared storage needs a configured endpoint.
+// Shared storage is protected by the Edge Function and a collection key entered at runtime.
 // Never put database service-role keys or server secrets in this public file.
-window.DEDICATIONS_CONFIG = { mode: 'browser' };
+window.DEDICATIONS_CONFIG = {
+  mode: 'api',
+  endpoint: 'https://qpoimchzysxsaskjrwba.supabase.co/functions/v1/dedications'
+};
 
-// After the private Supabase backend is configured and verified, switch to:
-// window.DEDICATIONS_CONFIG = {
-//   mode: 'api',
-//   endpoint: 'https://YOUR_PROJECT.supabase.co/functions/v1/dedications'
-// };
 // The collection key is entered at runtime, never committed in this file.
