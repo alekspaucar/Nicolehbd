@@ -98,6 +98,20 @@ test('missing, wrong and short collection keys are rejected before storage is co
   assert.equal(database.visits, 0);
 });
 
+test('a public collection reads and saves without sending a collection key', async () => {
+  const database = storage();
+  const publicEnvironment = { ...environment, DEDICATIONS_PUBLIC: 'true' };
+  const handler = app(database, publicEnvironment);
+  const read = await handler(request('GET', undefined, { 'x-collection-key': null }));
+  assert.equal(read.status, 200);
+  assert.deepEqual(await read.json(), { dedications: [] });
+
+  const saved = await handler(request('POST', song, { 'x-collection-key': null }));
+  assert.equal(saved.status, 201);
+  assert.equal((await saved.json()).dedication.direction, 'to-anis');
+  assert.equal(database.rows.length, 1);
+});
+
 test('only exact allowed origins can reach the collection', async () => {
   const database = storage();
   const handler = app(database);

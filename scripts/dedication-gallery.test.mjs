@@ -50,7 +50,7 @@ function record(overrides = {}) {
   };
 }
 
-async function gallery(initial = []) {
+async function gallery(initial = [], { publicCollection = false } = {}) {
   const elements = Object.fromEntries([
     'dedication-form', 'dedication-url', 'dedication-message', 'dedication-direction',
     'dedication-status', 'saved-dedications', 'dedications-empty',
@@ -62,6 +62,7 @@ async function gallery(initial = []) {
   const pending = deferred();
   const started = deferred();
   let posts = 0;
+  const requests = [];
   const document = {
     documentElement: { classList: { contains: name => name === 'unlocked' } },
     getElementById: id => elements[id],
@@ -72,7 +73,9 @@ async function gallery(initial = []) {
     DedicationStore, SongDedication,
     DEDICATIONS_CONFIG: {
       mode: 'api', endpoint: '/api/dedications',
+      public: publicCollection,
       fetch: async (_endpoint, options) => {
+        requests.push(options);
         if (options.method === 'GET') return { ok: true, json: async () => ({ dedications: initial }) };
         assert.equal(options.method, 'POST');
         posts += 1;
@@ -80,7 +83,7 @@ async function gallery(initial = []) {
         return pending.promise;
       },
     },
-    sessionStorage: { getItem: () => 'a'.repeat(32), setItem() {} },
+    sessionStorage: { getItem: () => publicCollection ? '' : 'a'.repeat(32), setItem() {} },
     addEventListener() {},
   };
   runInNewContext(source, { window, document });
@@ -95,12 +98,19 @@ async function gallery(initial = []) {
   direction.value = 'to-anis';
   return {
     form, url, message, direction, elements, started: started.promise,
-    posts: () => posts,
+    posts: () => posts, requests,
     succeed: (saved = record()) => pending.resolve({ ok: true, json: async () => ({ dedication: saved }) }),
     fail: () => pending.resolve({ ok: false, status: 503 }),
     notes: () => elements['saved-dedications'].children.map(card => card.children.find(child => child.className === 'saved-dedication-message')?.textContent),
   };
 }
+
+test('a public collection loads without showing or sending a collection key', async () => {
+  const view = await gallery([], { publicCollection: true });
+  assert.equal(view.elements['dedication-access'].hidden, true);
+  assert.equal(view.form.button.disabled, false);
+  assert.equal(view.requests[0].headers['x-collection-key'], undefined);
+});
 
 test('a successful save clears the unchanged submitted draft', async () => {
   const view = await gallery();

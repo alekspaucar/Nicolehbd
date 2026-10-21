@@ -2,6 +2,7 @@
 // Never put database service-role keys or server secrets in this public file.
 window.DEDICATIONS_CONFIG = {
   mode: 'api',
+  public: true,
   endpoint: 'https://qpoimchzysxsaskjrwba.supabase.co/functions/v1/dedications'
 };
 

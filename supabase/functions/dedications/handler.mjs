@@ -18,8 +18,9 @@ function configuration(env) {
     const legacyKey = env('SUPABASE_SERVICE_ROLE_KEY');
     const secretKey = legacyKey || JSON.parse(env('SUPABASE_SECRET_KEYS') || '{}').default;
     const expectedHash = env('DEDICATIONS_KEY_SHA256');
+    const isPublic = env('DEDICATIONS_PUBLIC') === 'true';
     const origins = (env('DEDICATIONS_ALLOWED_ORIGINS') || '').split(',').map((value) => value.trim());
-    if (typeof secretKey !== 'string' || !secretKey.trim() || !/^[a-f0-9]{64}$/i.test(expectedHash || '')
+    if (typeof secretKey !== 'string' || !secretKey.trim() || (!isPublic && !/^[a-f0-9]{64}$/i.test(expectedHash || ''))
       || !origins.length || origins.some((value) => {
         const parsed = new URL(value);
         const loopback = ['localhost', '127.0.0.1', '[::1]'].includes(parsed.hostname);
@@ -30,7 +31,8 @@ function configuration(env) {
       projectUrl: projectUrl.origin,
       secretKey,
       legacy: Boolean(legacyKey),
-      expectedHash: expectedHash.toLowerCase(),
+      isPublic,
+      expectedHash: typeof expectedHash === 'string' ? expectedHash.toLowerCase() : '',
       origins: new Set(origins),
     };
   } catch {
@@ -119,7 +121,7 @@ export function createHandler({ env, fetch: fetchStorage = globalThis.fetch, pre
       return respond(204);
     }
 
-    if (!(await authenticated(request.headers.get('x-collection-key'), config.expectedHash))) {
+    if (!config.isPublic && !(await authenticated(request.headers.get('x-collection-key'), config.expectedHash))) {
       return error(401, 'La clave de la colección no es correcta.');
     }
     if (!['GET', 'POST'].includes(request.method)) {

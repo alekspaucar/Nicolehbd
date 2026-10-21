@@ -79,6 +79,8 @@
     const accessForm = document.getElementById('dedication-access');
     const accessKey = document.getElementById('dedication-access-key');
     const config = window.DEDICATIONS_CONFIG || { mode: 'browser' };
+    const publicCollection = config.mode === 'api' && config.public === true;
+    if (publicCollection) accessForm.hidden = true;
     let store;
     let records = [];
     let loading = true;
@@ -102,9 +104,12 @@
     direction.addEventListener('change', resetStatus);
 
     try {
-      store = window.DedicationStore.create({ ...config, headers: function () { return { 'x-collection-key': accessKey.value.trim() }; } });
+      store = window.DedicationStore.create({
+        ...config,
+        headers: publicCollection ? undefined : function () { return { 'x-collection-key': accessKey.value.trim() }; }
+      });
       storageNote.textContent = store.mode === 'browser' ? 'Por ahora se guardan en este navegador. Para verlas desde ambos celulares falta activar el guardado compartido.' : 'Las canciones quedan guardadas para volver a escucharlas aquí.';
-      if (store.mode === 'api') {
+      if (store.mode === 'api' && !publicCollection) {
         accessForm.hidden = false;
         try { accessKey.value = window.sessionStorage.getItem('anis-collection-key') || ''; } catch (_) { /* The collection can open without remembering the key. */ }
       }
@@ -120,7 +125,7 @@
       try {
         records = await store.list();
         loaded = true;
-        if (store.mode === 'api') {
+        if (store.mode === 'api' && !publicCollection) {
           accessForm.hidden = true;
           storageNote.textContent = 'Nuestra colección compartida: las canciones quedan aquí para volver a escucharlas.';
           try { window.sessionStorage.setItem('anis-collection-key', accessKey.value.trim()); } catch (_) { /* Continue with an in-memory key. */ }
@@ -131,7 +136,7 @@
         loaded = false;
         empty.hidden = true;
         status.textContent = error.message || 'No se pudieron cargar las canciones. Vuelve a abrir la página para intentarlo otra vez.';
-        if (store.mode === 'api') accessForm.hidden = false;
+        if (store.mode === 'api' && !publicCollection) accessForm.hidden = false;
       } finally {
         loading = false;
         submit.disabled = store.mode === 'api' && !loaded;
@@ -189,7 +194,7 @@
     window.addEventListener('storage', function (event) {
       if (store.mode === 'browser' && event.key === 'anis-dedications-v1') load();
     });
-    if (store.mode === 'browser' || accessKey.value) load();
+    if (store.mode === 'browser' || publicCollection || accessKey.value) load();
     else {
       loading = false;
       empty.hidden = true;
